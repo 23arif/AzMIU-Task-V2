@@ -14,6 +14,7 @@ body
     background-size: cover
     .blur
         background: rgba(41,116,185,0.6)
+        // background: rgba(51,51,51,.6)
 
         header
                 height: 150px
@@ -60,7 +61,11 @@ body
                                 text-shadow: none
                                 text-decoration: underline
 
-
+        .owl-carousel
+            .item
+                img
+                    height: 500px
+        
         section
             margin-bottom: 30px
             .container
@@ -141,80 +146,114 @@ body
                                     width: 100%
                                     box-shadow: 0 1px 6px 2px #949393
 
+            .counter-container 
+                box-shadow: none!important
+                background: transparent!important
+                .item
+                    margin:0
+                    width: 100%!important
+                    height: 130px!important
+                    border: 5px solid $bgColor
+                    border-radius: 50%
+                    box-shadow: 0 1px 20px 4px #333
+                    text-shadow: 0px 5px 5px #333
+                    color: $whiteC
+                    text-align: center
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    flex-direction: column
+
+                    .counter-title  
+                        font-size: 18px
+                        font-weight: bold
+                        color: $whiteC
+                        -webkit-text-stroke: 1px $bgColor
+                        margin: 0
+                    .counter-count
+                        font-weight: bold
+
         @mixin icon-style
             color:$mainBgColor
             padding-right: 5px
 
         footer
-            background: #333333
+            background-image: url('/img/slider-3.jpg')
+            background-position: bottom
+            background-size: cover
             width: 100%
             height: 300px
             font-weight: 500
             color: $whiteC
             font-size: 18px
-            #footer-container
-                margin:40px 0 0 0
-                #news-container
-                    p
-                        font-size:13px
-                #contact-container    
-                    .contact-data
-                        font-size: 13px
-                        .icon-design
-                            @include icon-style
-                        a
-                            border: 2px solid transparent
-                            padding: 5px
-                            transition: all 0.3 ease-in-out
-                        :hover
-                            text-decoration: none
-                            color: $bgColor
-                            transition: all 0.3 ease-in-out
-                        :focus
-                            border: 2px solid $bgColor
-                            border-radius: 10px
-                            outline: 0
-
-                #social-media-container
-                    .icon-container
-                        font-size: 13px
-                        display: flex
-                        justify-content: flex-start
-                        a
-                            border-radius: 50%
-                            display: inline-block
-                            margin-right: 15px  
+            .footer-blur
+                width:100%
+                height:100%
+                background: rgba(51,51,51,.6)
+                
+                #footer-container
+                    margin:40px 0 0 0
+                    #news-container
+                        p
+                            font-size:13px
+                    #contact-container    
+                        .contact-data
+                            font-size: 13px
                             .icon-design
                                 @include icon-style
-                                padding:0
-                                border:2px solid $mainBgColor
-                                border-radius: 50%
-                                width:40px
-                                height:40px
-                                display: flex
-                                justify-content: center
-                                align-items: center
+                            a
+                                border: 2px solid transparent
+                                padding: 5px
                                 transition: all 0.3 ease-in-out
-                        :hover
-                            text-decoration: none
-                        :hover i
-                            color: $bgColor
-                            border:2px solid $bgColor
-                            transition: all 0.3 ease-in-out 
-                        :focus 
-                            outline: 0
-                            border: 0
-                        :focus i
-                            color: $bgColor
-                            border:2px solid $bgColor
-                            transition: all 0.3 ease-in-out
-                            outline: 0
-            hr
-                background: $mainBgColor
-                width: 90%
-                height: 3px
-                border-radius: 50%
-                margin-top: 40px   
+                            :hover
+                                text-decoration: none
+                                color: $bgColor
+                                transition: all 0.3 ease-in-out
+                            :focus
+                                border: 2px solid $bgColor
+                                border-radius: 10px
+                                outline: 0
+
+                    #social-media-container
+                        .icon-container
+                            font-size: 13px
+                            display: flex
+                            justify-content: flex-start
+                            a
+                                border-radius: 50%
+                                display: inline-block
+                                margin-right: 15px  
+                                .icon-design
+                                    @include icon-style
+                                    padding:0
+                                    border:2px solid $mainBgColor
+                                    border-radius: 50%
+                                    width:40px
+                                    height:40px
+                                    display: flex
+                                    justify-content: center
+                                    align-items: center
+                                    transition: all 0.3 ease-in-out
+                            :hover
+                                text-decoration: none
+                            :hover i
+                                color: $bgColor
+                                border:2px solid $bgColor
+                                transition: all 0.3 ease-in-out 
+                            :focus 
+                                outline: 0
+                                border: 0
+                            :focus i
+                                color: $bgColor
+                                border:2px solid $bgColor
+                                transition: all 0.3 ease-in-out
+                                outline: 0
+                hr
+                    background: $mainBgColor
+                    width: 90%
+                    height: 3px
+                    border-radius: 50%
+                    margin-top: 40px   
 
         //------About-------------------------
         #about-container
