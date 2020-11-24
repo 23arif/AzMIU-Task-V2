@@ -96,6 +96,17 @@ body .blur section .container .row .left-container .title :hover {
   text-decoration: none;
   text-shadow: 0 2px 0 #c9c9c9;
 }
+body .blur section .container .row .left-container .see-all-news a {
+  font-weight: 700;
+  margin: 0 10px;
+  transition: all 0.5s ease-in-out;
+}
+body .blur section .container .row .left-container .see-all-news :hover {
+  margin-right: -10px;
+  text-decoration: none;
+  color: #f39030;
+  transition: all 0.5s ease-in-out;
+}
 body .blur section .container .row .left-container hr {
   margin: 0;
   margin-bottom: 20px;
